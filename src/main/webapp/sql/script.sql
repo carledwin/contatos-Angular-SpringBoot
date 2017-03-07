@@ -1,0 +1,1 @@
+INSERT INTO CONTATO VALUES(1,'marcos@email.com','MARCOS','98556324');

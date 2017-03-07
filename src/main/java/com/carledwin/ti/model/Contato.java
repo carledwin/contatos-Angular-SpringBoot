@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Contato {
@@ -13,11 +14,12 @@ public class Contato {
 	private Long id;
 	
 	private String nome;
-	
 	private String telefone;
-	
 	private String email;
 
+	@ManyToOne
+	private Estado estado;
+	
 	public Long getId() {
 		return id;
 	}
@@ -49,6 +51,13 @@ public class Contato {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
 	
 }

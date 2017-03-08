@@ -20,6 +20,9 @@ public class Contato {
 	@ManyToOne
 	private Estado estado;
 	
+	@ManyToOne
+	private Operadora operadora;
+	
 	public Long getId() {
 		return id;
 	}
@@ -59,5 +62,12 @@ public class Contato {
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
-	
+
+	public Operadora getOperadora() {
+		return operadora;
+	}
+
+	public void setOperadora(Operadora operadora) {
+		this.operadora = operadora;
+	}
 }

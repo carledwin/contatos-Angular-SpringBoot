@@ -1,5 +1,6 @@
 package com.carledwin.ti.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +13,10 @@ public class Operadora {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
-
+	
+	@Column(columnDefinition="char(2)")
+	private char codigo;
+	
 	public Long getId() {
 		return id;
 	}
@@ -24,5 +28,11 @@ public class Operadora {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	public char getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(char codigo) {
+		this.codigo = codigo;
 	}
 }

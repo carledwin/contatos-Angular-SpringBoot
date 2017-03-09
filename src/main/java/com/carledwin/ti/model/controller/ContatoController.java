@@ -22,7 +22,7 @@ public class ContatoController {
 	@Autowired
 	private ContatoRepository repository;
 	
-	@RequestMapping(method=RequestMethod.GET , value="/", produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(method=RequestMethod.GET , value="/contatos", produces=MediaType.APPLICATION_JSON_VALUE)
 	private ResponseEntity<Collection<Contato>> buscarTodos(){
 		Collection<Contato> contatos = repository.findAll();
 		return new ResponseEntity<>(contatos, HttpStatus.OK);
